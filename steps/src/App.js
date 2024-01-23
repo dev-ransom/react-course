@@ -49,7 +49,11 @@ function Steps() {
             <div className={step >= 3 ? 'active' : ''}>3</div>
           </div>
 
-          <StepMessage step={step}>{messages[step - 1]}</StepMessage>
+          <StepMessage step={step}>{messages[step - 1]}
+            <div className="buttons">
+              <Button bgColor="green" textColor="red" onClick={()=> alert(`learn how to ${messages[step]}`)}>Learn more</Button>
+          </div>
+          </StepMessage>
           <div className="buttons">
             <Button
               textColor={'#fff'}
